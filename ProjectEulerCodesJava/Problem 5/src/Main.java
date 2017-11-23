@@ -1,0 +1,36 @@
+
+public class Main {
+
+    public static void main(String[] args) {
+    	
+    	int num = 20;
+    	int[] largestPrimes = new int[num+1];
+    	
+    	for(int i = 2; i <= num; i++){
+    		int[] temp = new int[num+1];
+    		calcPrimes(temp, i);
+    		for(int j = 2; j <= i; j++)
+    			if(temp[j] > largestPrimes[j])
+    				largestPrimes[j] = temp[j];
+    	}
+    	int sum = 1;
+    	for(int k = 2; k <= num; k++){
+    		if(largestPrimes[k] != 0)
+    			for(int l = 1; l <= largestPrimes[k]; l++)
+    			sum *= k;
+    	}
+    	
+    	System.out.println(sum);
+
+    }
+    
+    public static void calcPrimes(int[] arr, int num){
+    	for(int i = 2; i <= num; i++)
+    		if(num % i == 0){
+    			arr[i]++;
+    			num /= i;
+    			i = 1;
+    		}
+    }
+    
+}

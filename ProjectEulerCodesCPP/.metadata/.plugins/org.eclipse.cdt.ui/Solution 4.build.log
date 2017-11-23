@@ -1,0 +1,17 @@
+11:22:10 **** Rebuild of configuration Debug for project Solution 4 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:19:21: error: incompatible types in assignment of 'int' to 'int [21]'
+   temp = calcPrime(i);
+                     ^
+..\main.cpp: In function 'int calcPrime(int)':
+..\main.cpp:38:9: error: invalid conversion from 'int*' to 'int' [-fpermissive]
+  return array;
+         ^~~~~
+..\main.cpp:31:6: warning: address of local variable 'array' returned [-Wreturn-local-addr]
+  int array[21] = {0};
+      ^~~~~
+
+11:22:13 Build Finished (took 3s.694ms)
+

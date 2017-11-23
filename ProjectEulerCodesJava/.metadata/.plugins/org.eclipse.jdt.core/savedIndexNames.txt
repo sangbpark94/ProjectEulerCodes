@@ -1,0 +1,4 @@
+INDEX VERSION 1.129+C:\Users\USER\Desktop\Project Euler Codes\ProjectEulerCodesJava\.metadata\.plugins\org.eclipse.jdt.core
+927297273.index
+3645575125.index
+2924232515.index
